@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC74AC551F5746D000D90906 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC74AC541F5746D000D90906 /* main.cpp */; };
+		CC74AC5D1F57508A00D90906 /* RandomVariable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CC74AC5B1F57508A00D90906 /* RandomVariable.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		CC74AC511F5746D000D90906 /* compbio293 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = compbio293; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC74AC541F5746D000D90906 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CC74AC5B1F57508A00D90906 /* RandomVariable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomVariable.cpp; sourceTree = "<group>"; };
+		CC74AC5C1F57508A00D90906 /* RandomVariable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RandomVariable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CC74AC541F5746D000D90906 /* main.cpp */,
+				CC74AC5B1F57508A00D90906 /* RandomVariable.cpp */,
+				CC74AC5C1F57508A00D90906 /* RandomVariable.hpp */,
 			);
 			path = compbio293;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC74AC5D1F57508A00D90906 /* RandomVariable.cpp in Sources */,
 				CC74AC551F5746D000D90906 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
