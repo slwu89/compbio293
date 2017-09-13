@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <iomanip>
 #include <set>
 #include "Tree.hpp"
 #include "RandomVariable.h"
@@ -150,7 +151,10 @@ void Tree::showNodes(Node* p, int indent){
         for(std::set<Node*>::iterator it = des.begin(); it != des.end(); it++){
             std::cout << (*it)->getIndex() << " ";
         }
+        
         std::cout << ")";
+        std::cout << " branch length: " << std::setprecision(4) << p->getBranchLength();
+        std::cout << " time: " << std::setprecision(4) << p->getTime();
         std::cout << std::endl;
         
         
