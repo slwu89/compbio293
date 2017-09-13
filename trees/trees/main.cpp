@@ -1,5 +1,6 @@
 //
 //  main.cpp
+//  comp bio 293
 //  trees
 //
 //  Created by Sean Wu on 9/13/17.
