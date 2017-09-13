@@ -25,7 +25,8 @@ int main(int argc, const char * argv[]) {
     
     // make a tree
     Tree myTree(lambda, mu, duration, &rv);
-    
+    myTree.showNodes();
+
     
     std::cout << "test successful" << std::endl;
     std::cout << "tree has: " << myTree.numberOfNodes() << std::endl;

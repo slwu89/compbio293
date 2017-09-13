@@ -13,3 +13,13 @@ Node::Node(void){
     index = 0;
     ancestor = NULL;
 }
+
+double Node::getBranchLength(void){
+    if(ancestor != NULL){
+        return(
+         time - ancestor->getTime()
+        );
+    } else {
+        return(0.0);
+    }
+}

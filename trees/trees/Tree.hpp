@@ -25,9 +25,16 @@ public:
     Node*           addNode(void);
     int             numberOfNodes(void){return (int)nodes.size();}
     
+    void            showNodes(void);
+    void            showNodes(Node* p, int indent);
+    
 private:
     std::vector<Node*>  nodes;
     Node*               root;
+    
+    void                initializeDownPassSequence(void);
+    void                passDown(Node* p);
+    std::vector<Node*>  downPassSequence; // vector to hold nodes in pre-order traversal of the tree
     
 };
 

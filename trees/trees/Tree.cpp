@@ -96,3 +96,66 @@ Node* Tree::addNode(void){
     return(p);
     
 }
+
+
+
+
+
+void Tree::initializeDownPassSequence(void){
+    
+    downPassSequence.clear();
+    
+    passDown(root);
+    
+    
+}
+
+void  Tree::passDown(Node* p){
+    if(p != NULL){
+        
+        std::set<Node*> des = p->getDescendants();
+        std::cout << "i'm getting descendents of this node! " << p->getIndex() << std::endl;
+        for(std::set<Node*>::iterator it = des.begin(); it != des.end(); it++){
+            passDown(*it);
+            
+            downPassSequence.push_back(p);
+        } // end for
+        
+    } //endif
+    
+}
+
+
+void Tree::showNodes(void){
+    showNodes(root, 0);
+}
+
+
+void Tree::showNodes(Node* p, int indent){
+    
+    if(p != NULL){
+        
+        std::set<Node*> des = p->getDescendants();
+        for(int i=0; i<indent; i++){
+            std::cout << " ";
+        }
+        
+        std::cout << p->getIndex();
+        if(p->getAncestor() != NULL){
+            std::cout << p->getAncestor()->getIndex() << " " ;
+        } else {
+            std::cout << " NULL ";
+        }
+        std::cout << "(";
+        for(std::set<Node*>::iterator it = des.begin(); it != des.end(); it++){
+            std::cout << (*it)->getIndex() << " ";
+        }
+        std::cout << ")";
+        std::cout << std::endl;
+        
+        
+        for(std::set<Node*>::iterator it = des.begin(); it != des.end(); it++){
+            showNodes(*it, indent + 3);
+        } // end for
+    }
+}

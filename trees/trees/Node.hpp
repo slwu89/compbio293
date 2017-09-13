@@ -31,6 +31,8 @@ public:
     void                setTime(double x){time = x;}
     double              getTime(void){return(time);}
     
+    double              getBranchLength(void);
+    
 private:
     
     std::set<Node*>     descendants;
